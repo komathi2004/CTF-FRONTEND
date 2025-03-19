@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="loginvideo.mp4" type="video/mp4">
+        Your browser does not support the video.
+    </video>
+    
+    <div class="login-container">
+        <form id="loginForm" class="login-form">
+            <h2>Login</h2>
+            <label>Email:</label>
+            <input type="text" id="email" placeholder="Enter your email" >
+            
+            <label>Password:</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+            
+            <button id="login-btn" type="submit">Login</button>
+            <p id="error-message" style="color: red; display: none;">Wrong username or password</p>
+            <p>Forget password?</p>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const errorMessage = document.getElementById('error-message');
+            
+            console.log("Sending login request with:", { email, password }); // Add this line to debug
+            
+            try {
+                const response = await fetch("http://localhost:4000/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ email, password }), // This is correct format
+                    credentials: "include"
+                });
+                
+                console.log("Response status:", response.status); // Add this line to debug
+                const data = await response.json();
+                console.log("Response data:", data); // Add this line to debug
+                
+                if (response.ok) {
+                    window.location.href = "../dashboard1/index.html";
+                } else {
+                    errorMessage.style.display = "block";
+                    errorMessage.innerText = data.message || "Wrong username or password";
+                }
+            } catch (error) {
+                console.error("Error during login:", error);
+                errorMessage.style.display = "block";
+                errorMessage.innerText = "Server error. Please try again.";
+            }
+        });
+    </script>
+</body>
+</html>

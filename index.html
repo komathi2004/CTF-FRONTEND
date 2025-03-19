@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="./assets/images/squi-logo.png" />
+    <title>CTF: The Squid Hunt</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link href="./style.css" rel="stylesheet">
+    <meta
+      name="description"
+      content="Welcome to the Capture The Flag Event: The Squid Hunt. Enjoy Our squid game themed CTF Event"
+    />
+</head>
+<body>
+    <div class="header-wrapper" id="home">
+    <header class="" >
+        <!-- <img src="./assets/images/doll.png" alt="Squid Game Doll" class="squid-doll"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed mx-auto d-flex align-items-center">
+            <div class="container-fluid ">
+                <a class="navbar-brand" href="#">
+                    <span class="nav-shape nav-circle"></span>
+                    <span class="nav-shape nav-triangle"></span>
+                    <span class="nav-shape"></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#prizes">Prizes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#timeline">Timeline</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li> -->
+                    </ul>
+                    <a class="register-now" href="./login/index.html">Login</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="main-content">
+            <div class="hero-sec">
+                <div class="text">
+                    <h2 class="my-lg-5">Welcome To The CTF Event</h2>
+                    <h1>The Squid Hunt</h1>
+                    <p>Are Your Ready to play ?</p>
+                </div>
+            
+
+            <div class="countdown">
+                <div class="time-block">
+                    <div class="number" id="days">00</div>
+                    <div class="label">Days</div>
+                </div>
+                <div class="time-block">
+                    <div class="number" id="hours">00</div>
+                    <div class="label">Hours</div>
+                </div>
+                <div class="time-block">
+                    <div class="number" id="minutes">00</div>
+                    <div class="label">Min</div>
+                </div>
+                <div class="time-block">
+                    <div class="number" id="seconds">00</div>
+                    <div class="label">Sec</div>
+                </div>
+            </div>
+
+            <a href="https://forms.gle/BgHwabjix7CtfP6B9" class="register-now mt-3">Register Now</a>
+            <!-- <p class="cap">stay alive or stay human</p> -->
+        </div>
+        </div>
+        </div>
+      </header>
+     <section class="about-us" id="about">
+      <div class="container">
+
+      
+    <div class="row align-items-center about-section ">
+      <h2 class="mb-5" data-aos="fade-up" data-aos-delay="100">
+        Event Conducted By
+      </h2>
+      <div class="row align-items-center about-section " data-aos="fade-up" data-aos-delay="200">
+        <div class="col-md-6 about-text" >
+                    <h3>Null Student Chapter</h3>
+                    <p>Null is an open security community for ethical hackers and security enthusiasts. 
+                    This Student chapter focuses on fostering a security mindset, hosting workshops, and CTF challenges.</p>
+                </div>
+                <div class="col-md-6 position-relative about-image">
+                    <div class="image-bg"></div>
+                    <img src="assets/images/null.png" alt="Null Chapter Logo" class="img-fluid">
+                </div>
+      </div>
+
+        
+    </div>
+
+    <div class="row align-items-center about-section flex-md-row-reverse "  data-aos="fade-up" data-aos-delay="300">
+        <div class="col-md-6 about-text">
+            <h3>OWASP Student Chapter</h3>
+            <p>OWASP is a student-driven chapter dedicated to cybersecurity awareness and research. 
+               It provides students with hands-on experience in application security and ethical hacking.</p>
+        </div>
+        <div class="col-md-6 position-relative about-image">
+            <div class="image-bg"></div>
+            <img src="assets/images/owasp.png" alt="OWASP Chapter Logo" class="img-fluid">
+        </div>
+    </div>
+    <div class="container text-center">
+    <h4 class="mb-4"  data-aos="fade-up" data-aos-delay="400">In Collaboration with:</h4>
+    <img src="./assets/images/dept-it.png" class="img-fluid w-75 w-sm-100" alt="Department of Information Technology"  data-aos="fade-up" data-aos-delay="500"/>
+</div>
+
+   
+</section>
+
+<section class="text-center" id="prizes">
+  <div class="container">
+    <h1  data-aos="fade-up" data-aos-delay="100">🦑 Prizes 🦑</h1>
+    <h4 class="mb-5"  data-aos="fade-up" data-aos-delay="200">Cash Prizes + Internship Opportunities</h4>
+    <div class="row justify-content-center">
+        <div class="col-4 prize silver d-none d-md-block"  data-aos="fade-up" data-aos-delay="1000">
+            <div class="game-symbol"></div>
+            <img src="./assets/images/prize-silver.png" alt="2nd Prize" class="img-fluid">
+            <h2>2nd Prize</h2>
+            <p>₹ 3,000</p>
+        </div>
+        <div class="col-8 col-md-4 prize gold"  data-aos="fade-up" data-aos-delay="400">
+            <div class="game-symbol"></div>
+            <img src="./assets/images/prize-gold.png" alt="1st Prize" class="img-fluid">
+            <h2>1st Prize</h2>
+            <p>₹ 5,000</p>
+        </div>
+        <div class="col-4 prize bronze d-none d-md-block"  data-aos="fade-up" data-aos-delay="1400">
+            <div class="game-symbol"></div>
+            <img src="./assets/images/prize-bronze.png" alt="3rd Prize" class="img-fluid">
+            <h2>3rd Prize</h2>
+            <p>₹ 2,000</p>
+        </div>
+
+        <div class="row justify-content-center d-md-none ">
+        <div class="col-6 col-md-4 prize silver" data-aos="fade-up" data-aos-delay="1000">
+            <div class="game-symbol"></div>
+            <img src="./assets/images/prize-silver.png" alt="2nd Prize" class="img-fluid">
+            <h2>2nd Prize</h2>
+            <p>₹ 3,000</p>
+        </div>
+        <div class="col-6 col-md-4 prize bronze d-md-none" data-aos="fade-up" data-aos-delay="1400">
+            <div class="game-symbol"></div>
+            <img src="./assets/images/prize-bronze.png" alt="3rd Prize" class="img-fluid">
+            <h2>3rd Prize</h2>
+            <p>₹ 2,000</p>
+        </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="timeline" class="timeline-section">
+  
+  <div class="container justify-content-center">
+        <h1 class="text-start"  data-aos="fade-up" data-aos-delay="200">Event Timeline</h1>
+        <div class="row justify-content-center d-none d-md-block"  data-aos="fade-up" data-aos-delay="600">
+            <img class="image-fluid py-2" src="./assets/images/timelines.svg" alt="Event Timeline Image" style="width: 90%;"  />
+        </div>
+        <div class="row justify-content-center align-items-center d-block d-md-none"  data-aos="fade-up" data-aos-delay="600">
+            <img class="image-fluid" src="./assets/images/timeline-mobile.svg" alt="Event timeline image" />
+        </div>
+    </div>
+  
+
+</section>
+
+<section class="container text-center" id="organizers">
+    <h1 data-aos="fade-up" data-aos-delay="200" >🔺 Organizers ⭕</h1>
+
+     <div class="row justify-content-center">
+        <!-- VIP (Faculty Coordinator) -->
+        <div class="col-6 col-lg-3 organizer vip" data-aos="fade-up" data-aos-delay="200">
+            <div class="shape">
+                <img src="./assets/images/officer.png" alt="Faculty Coordinator">
+            </div>
+            <h3 class="my-3 ">Faculty Coordinator</h3>
+            <!-- <a href="https://www.linkedin.com/in/faculty" target="_blank">LinkedIn</a> -->
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <!-- Square (First Row) -->
+        <div class="col-5  col-lg-3 organizer" data-aos="fade-up" data-aos-delay="400">
+            <div class="shape">
+                <img src="./assets/images/mari.png" class="image-fluid img-ss" alt="Organizer 2">
+            </div>
+            <h3 class="my-3 ">Mariappan</h3>
+            <!-- <a href="https://www.linkedin.com/in/organizer2" target="_blank">LinkedIn</a> -->
+        </div>
+        <div class="col-5 col-lg-3 organizer" data-aos="fade-up" data-aos-delay="800">
+            <div class="shape">
+                <img src="./assets/images/neha.png" class="image-fluid img-ss" alt="Organizer 1">
+            </div>
+            <h3 class="my-3 ">Neeharika</h3>
+            <!-- <a href="https://www.linkedin.com/in/organizer1" target="_blank">LinkedIn</a> -->
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <!-- Triangle (Second Row) -->
+        <div class="col-4 col-lg-3 organizer" data-aos="fade-up" data-aos-delay="200">
+            <div class="shape">
+                <img src="./assets/images/mayilan.png" class="image-fluid img-ss" alt="Organizer 3">
+            </div>
+            <h3 class="my-3 ">Mayilan</h3>
+            <!-- <a href="https://www.linkedin.com/in/organizer3" target="_blank">LinkedIn</a> -->
+        </div>
+
+        <div class="col-4 col-lg-3 organizer" data-aos="fade-up" data-aos-delay="400">
+            <div class="shape">
+                <img src="./assets/images/kannan.png" class="image-fluid img-ss" alt="Organizer 4">
+            </div>
+            <h3 class="my-3 ">Kannan</h3>
+            <!-- <a href="https://www.linkedin.com/in/organizer4" target="_blank">LinkedIn</a> -->
+        </div>
+
+        <div class="col-4 col-lg-3 organizer" data-aos="fade-up" data-aos-delay="600">
+            <div class="shape">
+                <img src="./assets/images/naveen.png" class="image-fluid img-ss" alt="Organizer 4">
+            </div>
+            <h3 class="my-3 ">Naveen</h3>
+            <!-- <a href="https://www.linkedin.com/in/organizer4" target="_blank">LinkedIn</a> -->
+        </div>
+    </div>
+
+    <section class="container">
+    <div class="row justify-content-center">
+        <div class="col-4 col-lg-2 organizer " data-aos="fade-up" data-aos-delay="200">
+            <div class="shape">
+                <img src="./assets/images/jaivanti.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h5 class="my-3 ">Jaivanti MTS</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer " data-aos="fade-up" data-aos-delay="400">
+            <div class="shape">
+                <img src="./assets/images/jude.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h5 class="my-3 ">Jude Sahai</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer " data-aos="fade-up" data-aos-delay="600">
+            <div class="shape">
+                <img src="./assets/images/keesh.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h5 class="my-3 ">Kesava Moorthi</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer " data-aos="fade-up" data-aos-delay="800">
+            <div class="shape">
+                <img src="./assets/images/joel.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h5 class="my-3 ">Joel S</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer " data-aos="fade-up" data-aos-delay="1000">
+            <div class="shape">
+                <img src="./assets/images/jai.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h5 class="my-3 ">Jai Aakash</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer " data-aos="fade-up" data-aos-delay="1200">
+            <div class="shape">
+                <img src="./assets/images/akshaya.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h5 class="my-3 ">Akshaya M</h5>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-4 col-lg-2 organizer" data-aos="fade-up" data-aos-delay="200">
+            <div class="shape">
+                <img src="./assets/images/darshini.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h5 class="my-3 ">Dharshini S</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer" data-aos="fade-up" data-aos-delay="400">
+            <div class="shape">
+                <img src="./assets/images/anto.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h5 class="my-3 ">Anto Jerome</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer" data-aos="fade-up" data-aos-delay="600">
+            <div class="shape">
+                <img src="./assets/images/rahul.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h5 class="my-3 ">Raghul M</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer" data-aos="fade-up" data-aos-delay="800">
+            <div class="shape">
+                <img src="./assets/images/surya.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h5 class="my-3 ">Surya Prasanth</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer" data-aos="fade-up" data-aos-delay="1000">
+            <div class="shape">
+                <img src="./assets/images/sam.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h5 class="my-3 ">Samson Enoch</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer" data-aos="fade-up" data-aos-delay="1200">
+            <div class="shape">
+                <img src="./assets/images/dhanush.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h5 class="my-3 ">Dhanush VN</h5>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <h2 class="text-start my-5">Developers:</h2>
+        <div class="col-4 col-lg-2 organizer"  data-aos="fade-up" data-aos-delay="200">
+            <div class="shape">
+                <img src="./assets/images/koma.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h5>Komathi</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer" data-aos="fade-up" data-aos-delay="400">
+            <div class="shape">
+                <img src="./assets/images/shalom.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h5>Shalom</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer"  data-aos="fade-up" data-aos-delay="600">
+            <div class="shape">
+                <img src="./assets/images/niran.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h5>Niranjani</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer"  data-aos="fade-up" data-aos-delay="800">
+            <div class="shape">
+                <img src="./assets/images/kav.png" class="img-fluid img-ss" alt="Organizer 5">
+            </div>
+            <h5>Kaviya</h5>
+        </div>
+
+        <div class="col-4 col-lg-2 organizer"  data-aos="fade-up" data-aos-delay="1000">
+            <div class="shape">
+                <img src="./assets/images/jemina.png" class="img-fluid img-ss" alt="Organizer 6">
+            </div>
+            <h5>Jemina</h5>
+        </div>
+
+        
+        
+    </div>
+</section>
+
+   
+</section>
+
+<footer class="footer">
+    <p>&copy; CTF: The Squid Hunt Event | All Rights Reserved</p>
+</footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const countDownDate = new Date("March 17, 2025 09:30:00").getTime();
+
+        
+      function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = countDownDate - now;
+
+    const days = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+    const hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+    const minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+    const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+}
+
+setInterval(updateCountdown, 1000);
+
+      </script>
+
+     <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all nav links
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        // For each link, add a click event listener
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent the default anchor click behavior
+                
+                // Get the target section's ID from the href attribute of the link
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                // Scroll to the target element with an offset of -80px
+                window.scrollTo({
+                    top: targetElement.offsetTop - 135, // Adjust for 80px offset
+                    behavior: 'smooth' // Smooth scrolling
+                });
+
+                // Close the navbar in mobile view (optional)
+                const navbarCollapse = document.getElementById('navbarNav');
+                if (navbarCollapse.classList.contains('show')) {
+                    const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse, {
+                        toggle: false
+                    });
+                    bootstrapCollapse.hide();
+                }
+            });
+        });
+    });
+</script>
+
+
+
+      <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+
+
+      <script>
+  AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    once: true // Ensures animation happens only once
+  });
+</script>
+
+</body>
+</html>

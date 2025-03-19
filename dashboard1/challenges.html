@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Challenges | Squid Game</title>
+     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+ </head>
+ <body class="bg-dark text-white">
+     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+         <div class="container">
+             <a class="navbar-brand fw-bold" href="#">SQUID GAME CTF</a>
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                 <span class="navbar-toggler-icon"></span>
+             </button>
+             <div class="collapse navbar-collapse" id="navbarNav">
+                 <ul class="navbar-nav ms-auto">
+                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                     <li class="nav-item"><a class="nav-link active" href="challenges.html">Challenges</a></li>
+                     <li class="nav-item"><a class="nav-link" href="leaderboard.html">Leaderboard</a></li>
+                     <li class="nav-item"><button id="signOutBtn" class="btn btn-dark">Sign Out</button></li>
+                 </ul>
+             </div>
+         </div>
+     </nav>
+ 
+     <div class="container">
+         <div class="challenge-section easy">
+             <h2 class="challenge-heading">Easy</h2>
+             <div class="cards-wrapper">
+                 <div class="card" data-id="easy-1" data-name="Cryptography" data-points="100" data-description="Decrypt a simple cipher text." data-level="Easy">Easy-1</div>
+                 <div class="card" data-id="easy-2" data-name="Steganography" data-points="100" data-description="Find the hidden message in an image." data-level="Easy">Easy-2</div>
+                 <div class="card" data-id="easy-3" data-name="Web Exploitation" data-points="100" data-description="Find an SQL Injection vulnerability." data-level="Easy">Easy-3</div>
+                 <div class="card" data-id="easy-4" data-name="Binary Exploitation" data-points="100" data-description="Analyze a basic buffer overflow vulnerability." data-level="Easy">Easy-4</div>
+                 <div class="card" data-id="easy-5" data-name="Reverse Engineering" data-points="100" data-description="Extract a hidden string from a compiled binary." data-level="Easy">Easy-5</div>
+                 <div class="card" data-id="easy-6" data-name="Forensics" data-points="100" data-description="Extract metadata from a file." data-level="Easy">Easy-6</div>
+                 <div class="card" data-id="easy-7" data-name="OSINT Challenge" data-points="100" data-description="Find a specific person using open-source intelligence." data-level="Easy">Easy-7</div>
+             </div>
+         </div>
+ 
+         <div class="challenge-section medium">
+             <h2 class="challenge-heading">Medium</h2>
+             <div class="cards-wrapper">
+                 <div class="card" data-name="Cryptography" data-id="medium-1" data-points="200" data-description="Decrypt a message encoded with an advanced cipher." data-level="Medium">Medium-1</div>
+                 <div class="card" data-name="Steganography" data-id="medium-2" data-points="200" data-description="Extract hidden text from an audio file." data-level="Medium">Medium-2</div>
+                 <div class="card" data-name="Web Exploitation"  data-id="medium-3" data-points="200" data-description="Find and exploit a Cross-Site Scripting (XSS) vulnerability." data-level="Medium">Medium-3</div>
+                 <div class="card" data-name="Binary Exploitation"  data-id="medium-4" data-points="200" data-description="Analyze an executable to find and exploit a buffer overflow." data-level="Medium">Medium-4</div>
+                 <div class="card" data-name="Reverse Engineering"  data-id="medium-5" data-points="200" data-description="Reverse engineer an application to bypass authentication." data-level="Medium">Medium-5</div>
+                 <div class="card" data-name="Forensics" data-id="medium-6" data-points="200" data-description="Recover deleted files from an image dump." data-level="Medium">Medium-6</div>
+                 <div class="card" data-name="OSINT Challenge" data-id="medium-7" data-points="200" data-description="Trace an online identity through multiple social platforms." data-level="Medium">Medium-7</div>
+             </div>
+         </div>
+ 
+         <div class="challenge-section hard">
+             <h2 class="challenge-heading">Hard</h2>
+             <div class="cards-wrapper">
+                 <a href="hard_challenge.html" class="card text-decoration-none text-white" data-id="hard-1" data-name="Hard 1" data-points="500" data-description="A complex challenge involving multiple vulnerabilities." data-level="Hard">
+                     Hard 1
+                 </a>
+             </div>
+         </div>
+     </div>
+ 
+     <div class="modal fade" id="challengeModal" tabindex="-1" aria-labelledby="challengeModalLabel" aria-hidden="true">
+         <div class="modal-dialog"> 
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="challengeModalLabel">Challenge Caption</h5>
+                 </div>
+                 <div class="modal-body">
+                     <h6 class="phrase">🔺 Welcome player, You have one chance. Will you play or walk away?</h6>
+                     <h3 id="modalChallengeName">CHALLENGE NAME</h3>
+                     <h2 id="modalChallengePoints">100</h2>
+                     <p id="modalChallengeDescription">Description of the challenge goes here.</p>
+                     <button class="btn btn-primary w-100 mb-3" id="viewHintsBtn">VIEW HINTS</button>
+                     <button class="btn btn-success w-100 mb-3" id="unlockHintBtn">UNLOCK HINT FOR 20 POINTS</button>
+                     <div class="input-group">
+                         <input type="text" class="form-control" id="challengeAnswer" placeholder="ENTER YOUR ANSWER HERE">
+                         <button class="btn btn-warning" id="submitButton" disabled>SUBMIT</button>
+                     </div>
+                     <div id="statusMessage" class="text-success mt-2" style="display: none;">
+                         Successful submission
+                     </div>
+                 </div>
+             </div>
+         </div> 
+     </div>
+ 
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script>
+         let selectedChallengeId = "";
+         
+         document.querySelectorAll('.card').forEach(card => {
+             card.addEventListener('click', () => {
+
+                if (card.getAttribute('data-level') === 'Hard') return;
+                 
+                 selectedChallengeId = card.getAttribute('data-id');
+                 const challengeName = card.getAttribute('data-name');
+                 const challengePoints = card.getAttribute('data-points');
+                 const challengeDescription = card.getAttribute('data-description');
+                 
+                 document.getElementById('modalChallengeName').textContent = challengeName;
+                 document.getElementById('modalChallengePoints').textContent = 'Score: ' + challengePoints;
+                 document.getElementById('modalChallengeDescription').textContent = challengeDescription;
+                 
+                 new bootstrap.Modal(document.getElementById('challengeModal')).show();
+             });
+         });
+         
+         document.getElementById('challengeAnswer').addEventListener('input', function() {
+             document.getElementById('submitButton').disabled = !this.value.trim();
+         });
+         
+         document.getElementById('submitButton').addEventListener('click', async function() {
+             const flagInput = document.getElementById('challengeAnswer').value.trim();
+             const statusMessage = document.getElementById('statusMessage');
+             
+             if (!flagInput) return;
+             
+             statusMessage.style.display = 'block';
+             statusMessage.innerHTML = "Submitting...";
+             statusMessage.className = "mt-2 text-warning";
+             
+             try {
+                 const response = await fetch('http://localhost:4000/submit-flag', {
+                     method: 'POST',
+                     headers: { 'Content-Type': 'application/json' },
+                     body: JSON.stringify({ challengeId: selectedChallengeId, flag: flagInput })
+                 });
+                 
+                 const data = await response.json();
+                 
+                 if (data.status === true) {
+                     statusMessage.innerHTML = "✅ Correct flag!";
+                     statusMessage.className = "mt-2 text-success";
+                 } else {
+                     statusMessage.innerHTML = "❌ Incorrect flag. Try again!";
+                     statusMessage.className = "mt-2 text-danger";
+                 }
+             } catch (error) {
+                 statusMessage.innerHTML = "⚠️ Server error. Please try again.";
+                 statusMessage.className = "mt-2 text-danger";
+             }
+         });
+         
+         document.getElementById('signOutBtn').addEventListener('click', function() {
+             fetch('http://localhost:4000/logout', {
+                 method: 'GET',
+                 credentials: 'include', 
+             })
+             .then(response => response.json())
+             .then(data => {
+                 console.log('Logout successful:', data);
+                 window.location.href = 'file:///C:/ctf-frontend/index.html';
+             })
+             .catch(error => {
+                 console.error('Logout error:', error);
+                 window.location.href = 'file:///C:/ctf-frontend/index.html';
+             });
+         });
+     </script>
+ </body>
+ </html>
+ 
