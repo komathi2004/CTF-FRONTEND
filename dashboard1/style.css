@@ -287,3 +287,31 @@ h1,h2,h3{
 .btn-dark:hover {
     box-shadow: 0 0 15px #ff1e00;
 }
+
+
+
+
+
+
+
+/* Add to your style.css */
+.card.completed {
+    position: relative;
+    border: 2px solid #28a745;
+}
+
+.completion-mark {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 16px;
+}
+
+.team-score {
+    background-color: #343a40;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #dc3545;
+}

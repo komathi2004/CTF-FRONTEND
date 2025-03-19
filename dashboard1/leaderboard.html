@@ -157,6 +157,52 @@
                 window.location.href = 'file:///C:/ctf-frontend/index.html';
             });
         });
+
+        // Replace the existing leaderboard table tbody with this:
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch leaderboard data when page loads
+    fetchLeaderboardData();
+    
+    // Set up chart data
+    setupLeaderboardChart();
+});
+
+function fetchLeaderboardData() {
+    fetch('http://localhost:4000/leaderboard', {
+        method: 'GET',
+        credentials: 'include'
+    })
+    .then(response => response.json())
+    .then(data => {
+        const tableBody = document.querySelector('tbody');
+        tableBody.innerHTML = ''; // Clear existing rows
+        
+        if (data.length === 0) {
+            tableBody.innerHTML = '<tr><td colspan="3" class="text-center">No scores yet</td></tr>';
+            return;
+        }
+        
+        data.forEach((team, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <th scope="row">${index + 1}</th>
+                <td>${team.email}</td>
+                <td>${team.points}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching leaderboard:', error);
+        document.querySelector('tbody').innerHTML = 
+            '<tr><td colspan="3" class="text-center">Error loading leaderboard data</td></tr>';
+    });
+}
+
+function setupLeaderboardChart() {
+    // Keep your existing chart code for now
+    // Later we can update it to use real data
+}
     </script>
 </body>
 </html> 
